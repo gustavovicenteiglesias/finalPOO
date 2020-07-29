@@ -43,7 +43,7 @@ class TablesAbono extends React.Component {
           listEmpresa:[],
         ListaAbono:[],
         listTecnico:[],
-          id:0,
+          id:"",
           marca: "",
           modelo: "",
           potencia: "",
@@ -201,6 +201,7 @@ class TablesAbono extends React.Component {
 
  setModalCrear(){
      this.setState({
+			id:"",
          marca: "",
           modelo: "",
           potencia: "",
@@ -247,6 +248,7 @@ class TablesAbono extends React.Component {
           idFirma: 0,
           idEmpresa:{},
           idTecnico:{},
+          busqueda:"",
           modalCrear:!this.state.modalCrear,
     });
 
@@ -358,11 +360,11 @@ class TablesAbono extends React.Component {
  filtrarElementos=()=>{
   const lista=this.state.listAbono;
   var search=lista.filter(item=>{
-    if(item.id.toString().includes(this.state.busqueda)||
-       item.idEmpresa.nombre.toLowerCase().includes(this.state.busqueda)||
-       item.idEmpresa.nombre.includes(this.state.busqueda)||
-       item.idTecnico.nombre.toLowerCase().includes(this.state.busqueda)||
-       item.idTecnico.nombre.includes(this.state.busqueda)
+    if(item.id.toString().includes(this.state.busqueda)//||
+       //item.idEmpresa.nombre.toLowerCase().includes(this.state.busqueda)||
+       //item.idEmpresa.nombre.includes(this.state.busqueda)||
+       //item.idTecnico.nombre.toLowerCase().includes(this.state.busqueda)||
+       //item.idTecnico.nombre.includes(this.state.busqueda)
        )
   
             {
@@ -386,7 +388,7 @@ class TablesAbono extends React.Component {
       alert("Error server ==>"+JSON.stringify(res))
     }
 
-    this.setState({listBusquedaAbono:this.state.listAbono});
+  
 
      console.log("Mounted ListEmpresa");
     const res1 = await empresaServices.list()
@@ -407,6 +409,7 @@ class TablesAbono extends React.Component {
     else {
       alert("Error server ==>"+JSON.stringify(rest))
     }
+ this.setState({listBusquedaAbono:this.state.listAbono});
   }
 
 
