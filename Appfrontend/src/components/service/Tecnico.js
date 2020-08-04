@@ -2,7 +2,7 @@ import axios from "axios";
 
 
 var URLactual = window.location.host;
-const baseUrl = "http://localhost:8080/api/tecnico/"
+const baseUrl = "http://"+URLactual+"/api/tecnico/"
 
 
 const tecnico = {};

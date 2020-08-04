@@ -2,7 +2,7 @@ import axios from "axios";
 
 
 var URLactual = window.location.host;
-const baseUrl = "http://localhost:8080/api/abono/"
+const baseUrl ="http://"+URLactual+"/api/abono/" 
 
 
 const abono = {};

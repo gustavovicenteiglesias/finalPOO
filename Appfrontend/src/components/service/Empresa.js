@@ -1,6 +1,7 @@
 import axios from "axios";
 var URLactual = window.location.host;
-const baseUrl = "http://localhost:8080/api/empresa/"
+console.log(URLactual);
+const baseUrl = "http://"+URLactual+"/api/empresa/"
 
 //comentario
 

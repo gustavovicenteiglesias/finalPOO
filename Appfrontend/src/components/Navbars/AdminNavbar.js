@@ -191,6 +191,7 @@ class AdminNavbar extends React.Component {
                     </NavLink>
                   </DropdownMenu>
                 </UncontrolledDropdown>
+                </div>
                 <UncontrolledDropdown nav>
                   <DropdownToggle
                     caret
@@ -199,6 +200,8 @@ class AdminNavbar extends React.Component {
                     nav
                     onClick={e => e.preventDefault()}
                   >
+                   
+                  
                     <div className="photo">
                       <img alt="..." src={require("assets/img/anime3.png")} />
                     </div>
@@ -219,7 +222,7 @@ class AdminNavbar extends React.Component {
                   </DropdownMenu>
                 </UncontrolledDropdown>
                 <li className="separator d-lg-none" />
-                </div>
+               
               </Nav>
             </Collapse>
           </Container>
